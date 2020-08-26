@@ -51,4 +51,19 @@ public class Operações {
 
         JOptionPane.showMessageDialog(null, "O Resultado da Subtração é: " + Resp);
     }
+    public static void divideValores() {
+
+        double V1, V2, Resp = 0;
+        String aux = "";
+
+        aux = JOptionPane.showInputDialog(null, "Insira o Dividendo: ");
+        V1 = Double.parseDouble(aux);
+
+        aux = JOptionPane.showInputDialog(null, "Insira o Divisor: ");
+        V2 = Double.parseDouble(aux);
+
+        Resp = (V1 / V2);
+
+        JOptionPane.showMessageDialog(null, "O Resultado da Divisão é: " + Resp);
+    }
 }
