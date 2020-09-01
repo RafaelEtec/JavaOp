@@ -7,6 +7,6 @@ public class TestaOperações {
     public static void main(String[] args) {
 
         JOptionPane.showMessageDialog(null, "Feito por Rafael Ferreira Goulart");
-        Operações.multiplicaValores();
+        Operações.mediaNota();
     }
 }
