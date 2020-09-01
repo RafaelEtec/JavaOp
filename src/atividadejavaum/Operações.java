@@ -51,6 +51,7 @@ public class Operações {
 
         JOptionPane.showMessageDialog(null, "O Resultado da Subtração é: " + Resp);
     }
+
     public static void divideValores() {
 
         double V1, V2, Resp = 0;
@@ -66,21 +67,31 @@ public class Operações {
 
         JOptionPane.showMessageDialog(null, "O Resultado da Divisão é: " + Resp);
     }
+
     public static void mediaNota() {
         double nota1, nota2, trabalho, media = 0;
         String aux = "";
-        
-        aux = JOptionPane.showInputDialog(null, "Insira a primeira nota: ","Primeira nota",JOptionPane.PLAIN_MESSAGE);
-        nota1 = Double.parseDouble(aux);
-        
-        aux = JOptionPane.showInputDialog(null, "Insira a Segunda nota: ","Segunda nota",JOptionPane.PLAIN_MESSAGE);
-        nota2 = Double.parseDouble(aux);
-        
-        aux = JOptionPane.showInputDialog(null, "Insira a nota do Trabalho: ","Nota do Trabalho",JOptionPane.PLAIN_MESSAGE);
-        trabalho = Double.parseDouble(aux);
-        
-        media = ( nota1 + nota2 + trabalho ) / 3;
-        
-        JOptionPane.showMessageDialog(null, "A sua média é de: " + media,"Cálculo da média do aluno",JOptionPane.INFORMATION_MESSAGE);
+
+        try {
+
+            aux = JOptionPane.showInputDialog(null, "Insira a primeira nota: ", "Primeira nota", JOptionPane.PLAIN_MESSAGE);
+            nota1 = Double.parseDouble(aux);
+
+            aux = JOptionPane.showInputDialog(null, "Insira a Segunda nota: ", "Segunda nota", JOptionPane.PLAIN_MESSAGE);
+            nota2 = Double.parseDouble(aux);
+
+            aux = JOptionPane.showInputDialog(null, "Insira a nota do Trabalho: ", "Nota do Trabalho", JOptionPane.PLAIN_MESSAGE);
+            trabalho = Double.parseDouble(aux);
+
+            media = (nota1 + nota2 + trabalho) / 3;
+
+            JOptionPane.showMessageDialog(null, "A sua média é de: " + media, "Cálculo da média do aluno", JOptionPane.INFORMATION_MESSAGE);
+
+        } catch (NumberFormatException ex) {
+
+            JOptionPane.showMessageDialog(null, "Insira somente números", "Erro", JOptionPane.INFORMATION_MESSAGE);
+            System.exit(0);
+        }
+
     }
 }
